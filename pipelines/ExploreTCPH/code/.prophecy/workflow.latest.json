@@ -1,0 +1,270 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "990",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default"
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "exploretcph"
+  },
+  "connections" : [ {
+    "id" : "KgKUA7tAV8ELKJqVKjqUl",
+    "source" : "qPT0LKcG49tr_Q-yOQbb-$$ZGcpdxBCeNfXMYpjMh9Qb",
+    "sourcePort" : "UvjHnsh5zFew6qVluAe9U$$OSordeDpENtLckaGotE3-",
+    "target" : "1WEhn6dfo4Z0UQp7xFaqs$$adqEs5-EddvhbJsxJaUkX",
+    "targetPort" : "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6"
+  }, {
+    "id" : "VlQrXK5o2XNz5HZ45eKQv",
+    "source" : "1WEhn6dfo4Z0UQp7xFaqs$$adqEs5-EddvhbJsxJaUkX",
+    "sourcePort" : "GHJbS_YbKbBLS7mSJqAnF$$rjHGIkl6X_a7pkIBIqaUd",
+    "target" : "tw2zZUD9E012DluHvmuTf$$VyVjg0vcEUy7cA1yrZVjh",
+    "targetPort" : "ep3c7ZopCDKgeB51fE314$$ObhKh6ggnCw3rvyuvH8hs"
+  }, {
+    "id" : "XGcoPMpmPjZKODxqiT5Zy",
+    "source" : "tw2zZUD9E012DluHvmuTf$$VyVjg0vcEUy7cA1yrZVjh",
+    "sourcePort" : "1oq9ClnJtp8FOSfQ4TEWr$$d2GtKX6BpLn2sfrs7aByu",
+    "target" : "4okqlEPTfJBQ2BT-ayKX0$$x1RGAvGZBBsx8lAjMGEdv",
+    "targetPort" : "h1yH_qSgeIe1lyDBoDOrw$$HtnP1ugd3-YFcdGsTs9tV"
+  } ],
+  "processes" : {
+    "4okqlEPTfJBQ2BT-ayKX0$$x1RGAvGZBBsx8lAjMGEdv" : {
+      "id" : "4okqlEPTfJBQ2BT-ayKX0$$x1RGAvGZBBsx8lAjMGEdv",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "LINEITEM_AGG",
+        "slug" : "LINEITEM_AGG",
+        "x" : 667.200187140716,
+        "y" : 121.19999999999999,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "h1yH_qSgeIe1lyDBoDOrw$$HtnP1ugd3-YFcdGsTs9tV",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "3328/datasets/lineitem_agg"
+      }
+    },
+    "1WEhn6dfo4Z0UQp7xFaqs$$adqEs5-EddvhbJsxJaUkX" : {
+      "id" : "1WEhn6dfo4Z0UQp7xFaqs$$adqEs5-EddvhbJsxJaUkX",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "AggQty",
+        "slug" : "AggQty",
+        "x" : 320.00078845435695,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "GHJbS_YbKbBLS7mSJqAnF$$rjHGIkl6X_a7pkIBIqaUd",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "SUM_QTY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(L_QUANTITY)"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "SUM_BASE_PRICE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(L_EXTENDEDPRICE)"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "SUM_DISC_PRICE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(L_EXTENDEDPRICE * (1-L_DISCOUNT))"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "SUM_CHARGE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(L_EXTENDEDPRICE * (1-L_DISCOUNT) * (1+L_TAX))"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "AVG_QTY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "avg(L_QUANTITY)"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "AVG_DISC",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "avg(L_DISCOUNT)"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "count_order",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "count(*)"
+          },
+          "description" : "",
+          "_row_id" : ""
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_DISCOUNT", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_QUANTITY", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_RETURNFLAG", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_LINESTATUS", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_TAX", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_EXTENDEDPRICE" ],
+        "groupBy" : [ {
+          "target" : "L_RETURNFLAG",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_RETURNFLAG"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "L_LINESTATUS",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_LINESTATUS"
+          },
+          "description" : "",
+          "_row_id" : ""
+        } ]
+      }
+    },
+    "qPT0LKcG49tr_Q-yOQbb-$$ZGcpdxBCeNfXMYpjMh9Qb" : {
+      "id" : "qPT0LKcG49tr_Q-yOQbb-$$ZGcpdxBCeNfXMYpjMh9Qb",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "LINEITEM",
+        "slug" : "LINEITEM",
+        "x" : 96.00054646580563,
+        "y" : 121.19999999999999,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "UvjHnsh5zFew6qVluAe9U$$OSordeDpENtLckaGotE3-",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "3328/datasets/TCPH_SF1_LINEITEM"
+      }
+    },
+    "tw2zZUD9E012DluHvmuTf$$VyVjg0vcEUy7cA1yrZVjh" : {
+      "id" : "tw2zZUD9E012DluHvmuTf$$VyVjg0vcEUy7cA1yrZVjh",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "OrderBy",
+        "slug" : "OrderBy",
+        "x" : 440.8000688369664,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ep3c7ZopCDKgeB51fE314$$ObhKh6ggnCw3rvyuvH8hs",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "1oq9ClnJtp8FOSfQ4TEWr$$d2GtKX6BpLn2sfrs7aByu",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "ep3c7ZopCDKgeB51fE314$$ObhKh6ggnCw3rvyuvH8hs##L_RETURNFLAG", "ep3c7ZopCDKgeB51fE314$$ObhKh6ggnCw3rvyuvH8hs##L_LINESTATUS" ],
+        "orders" : [ {
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_RETURNFLAG"
+          },
+          "sortType" : "asc"
+        }, {
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_LINESTATUS"
+          },
+          "sortType" : "asc"
+        } ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  }
+}

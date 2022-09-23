@@ -1,0 +1,32 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: s_phone
+    type: string
+    nullable: true
+    metadata: {}
+  - name: s_acctbal
+    type: long
+    nullable: true
+    metadata: {}
+  - name: s_name
+    type: string
+    nullable: true
+    metadata: {}
+  - name: s_suppkey
+    type: long
+    nullable: true
+    metadata: {}
+  - name: ps_supplycost
+    type: decimal(18,2)
+    nullable: true
+    metadata: {}
+  - name: ps_partkey
+    type: long
+    nullable: true
+    metadata: {}
+  - name: ps_suppkey
+    type: long
+    nullable: true
+    metadata: {}
