@@ -4,5 +4,5 @@ from pyspark.sql.types import *
 from exploretcph.config.ConfigStore import *
 from exploretcph.udfs.UDFs import *
 
-def Reformat_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0
+def OrderBy(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0.orderBy(col("L_RETURNFLAG").asc(), col("L_LINESTATUS").asc())

@@ -7,9 +7,10 @@ from prophecy.utils import *
 from exploretcph.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    Target_1(spark)
-    df_Source_0 = Source_0(spark)
-    df_Reformat_1 = Reformat_1(spark)
+    df_LINEITEM = LINEITEM(spark)
+    df_AggQty = AggQty(spark, df_LINEITEM)
+    df_OrderBy = OrderBy(spark, df_AggQty)
+    LINEITEM_AGG(spark, df_OrderBy)
 
 def main():
     spark = SparkSession.builder\
