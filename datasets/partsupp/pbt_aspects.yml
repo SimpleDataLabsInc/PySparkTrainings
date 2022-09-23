@@ -1,0 +1,24 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: ps_partkey
+    type: long
+    nullable: true
+    metadata: {}
+  - name: ps_suppkey
+    type: long
+    nullable: true
+    metadata: {}
+  - name: ps_availqty
+    type: integer
+    nullable: true
+    metadata: {}
+  - name: ps_supplycost
+    type: decimal(18,2)
+    nullable: true
+    metadata: {}
+  - name: ps_comment
+    type: string
+    nullable: true
+    metadata: {}
