@@ -8,9 +8,12 @@ from exploretcph.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_LINEITEM = LINEITEM(spark)
-    df_AggQty = AggQty(spark, df_LINEITEM)
+    df_Cleanup = Cleanup(spark, df_LINEITEM)
+    df_AggQty = AggQty(spark, df_Cleanup)
     df_OrderBy = OrderBy(spark, df_AggQty)
     LINEITEM_AGG(spark, df_OrderBy)
+    df_SQLStatement_1 = SQLStatement_1(spark, df_LINEITEM)
+    df_Filter_2 = Filter_2(spark, df_SQLStatement_1)
 
 def main():
     spark = SparkSession.builder\

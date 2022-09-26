@@ -1,0 +1,36 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: C_CUSTKEY
+    type: decimal(38,0)
+    nullable: true
+    metadata: {}
+  - name: C_NAME
+    type: string
+    nullable: true
+    metadata: {}
+  - name: C_ADDRESS
+    type: string
+    nullable: true
+    metadata: {}
+  - name: C_NATIONKEY
+    type: decimal(38,0)
+    nullable: true
+    metadata: {}
+  - name: C_PHONE
+    type: string
+    nullable: true
+    metadata: {}
+  - name: C_ACCTBAL
+    type: decimal(12,2)
+    nullable: true
+    metadata: {}
+  - name: C_MKTSEGMENT
+    type: string
+    nullable: true
+    metadata: {}
+  - name: C_COMMENT
+    type: string
+    nullable: true
+    metadata: {}

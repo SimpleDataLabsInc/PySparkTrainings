@@ -10,8 +10,8 @@ def AggQty(spark: SparkSession, in0: DataFrame) -> DataFrame:
     return df1.agg(
         sum(col("L_QUANTITY")).alias("SUM_QTY"), 
         sum(col("L_EXTENDEDPRICE")).alias("SUM_BASE_PRICE"), 
-        sum(col("L_EXTENDEDPRICE") * lit(1) - col("L_DISCOUNT")).alias("SUM_DISC_PRICE"), 
-        sum(col("L_EXTENDEDPRICE") * lit(1) - col("L_DISCOUNT") * lit(1) + col("L_TAX")).alias("SUM_CHARGE"), 
+        sum((col("L_EXTENDEDPRICE") * (lit(1) - col("L_DISCOUNT")))).alias("SUM_DISC_PRICE"), 
+        sum(((col("L_EXTENDEDPRICE") * (lit(1) - col("L_DISCOUNT"))) * (lit(1) + col("L_TAX")))).alias("SUM_CHARGE"), 
         avg(col("L_QUANTITY")).alias("AVG_QTY"), 
         avg(col("L_DISCOUNT")).alias("AVG_DISC"), 
         count(lit(1)).alias("count_order")

@@ -1,0 +1,20 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: N_NATIONKEY
+    type: decimal(38,0)
+    nullable: true
+    metadata: {}
+  - name: N_NAME
+    type: string
+    nullable: true
+    metadata: {}
+  - name: N_REGIONKEY
+    type: decimal(38,0)
+    nullable: true
+    metadata: {}
+  - name: N_COMMENT
+    type: string
+    nullable: true
+    metadata: {}

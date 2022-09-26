@@ -1,0 +1,16 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: R_REGIONKEY
+    type: decimal(38,0)
+    nullable: true
+    metadata: {}
+  - name: R_NAME
+    type: string
+    nullable: true
+    metadata: {}
+  - name: R_COMMENT
+    type: string
+    nullable: true
+    metadata: {}
