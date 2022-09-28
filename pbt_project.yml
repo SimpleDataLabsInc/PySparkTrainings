@@ -5,49 +5,6 @@ author: sparklearner123@gmail.com
 language: python
 buildSystem: wheel
 pipelines:
-  pipelines/MyFirstPipeline:
-    name: MyFirstPipeline
-    description: ''
-    author: sparklearner123@gmail.com
-    mode: batch
-    language: python
-    createdAt: '2022-09-27 15:24:24'
-    datasets:
-      inputs: []
-      outputs: []
-    dependencies: {}
-  pipelines/TPCH:
-    name: TPCH
-    description: ''
-    author: sparklearner123@gmail.com
-    mode: batch
-    language: python
-    createdAt: '2022-09-22 16:20:10'
-    datasets:
-      inputs:
-      - 3328/datasets/tcph_lineitem
-      - 3328/datasets/tcph_supplier
-      - 3328/datasets/SUPPLIERS_SF
-      - 3328/datasets/PART
-      - 3328/datasets/partsupp
-      - 3328/datasets/LINEITEMS_LIMIT_100K
-      - 3328/datasets/TPCH_SF1_PARTSUPP
-      outputs:
-      - 3328/datasets/SUPPLIERS_SF
-      - 3328/datasets/TPCH_call_collections
-      - 3328/datasets/LINEITEMS_LIMIT_100K
-    dependencies: {}
-  pipelines/Test:
-    name: Test
-    description: ''
-    author: sparklearner123@gmail.com
-    mode: batch
-    language: python
-    createdAt: '2022-09-28 15:20:24'
-    datasets:
-      inputs: []
-      outputs: []
-    dependencies: {}
   pipelines/ExploreTCPH:
     name: ExploreTCPH
     description: ''
