@@ -41,8 +41,8 @@ def main():
                 .getOrCreate()\
                 .newSession()
     Utils.initializeFromArgs(spark, parse_args())
-    spark.conf.set("prophecy.metadata.pipeline.uri", "3328/pipelines/TPCH")
-    MetricsCollector.start(spark = spark, pipelineId = "3328/pipelines/TPCH")
+    spark.conf.set("prophecy.metadata.pipeline.uri", "3390/pipelines/TPCH")
+    MetricsCollector.start(spark = spark, pipelineId = "3390/pipelines/TPCH")
     pipeline(spark)
     MetricsCollector.end(spark)
 

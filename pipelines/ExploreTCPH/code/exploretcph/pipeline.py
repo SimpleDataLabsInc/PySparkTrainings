@@ -8,7 +8,8 @@ from exploretcph.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_LINEITEM = LINEITEM(spark)
-    df_AggQty = AggQty(spark, df_LINEITEM)
+    df_Cleanup = Cleanup(spark, df_LINEITEM)
+    df_AggQty = AggQty(spark, df_Cleanup)
     df_OrderBy = OrderBy(spark, df_AggQty)
     LINEITEM_AGG(spark, df_OrderBy)
 
@@ -21,8 +22,8 @@ def main():
                 .getOrCreate()\
                 .newSession()
     Utils.initializeFromArgs(spark, parse_args())
-    spark.conf.set("prophecy.metadata.pipeline.uri", "3328/pipelines/ExploreTCPH")
-    MetricsCollector.start(spark = spark, pipelineId = "3328/pipelines/ExploreTCPH")
+    spark.conf.set("prophecy.metadata.pipeline.uri", "3390/pipelines/ExploreTCPH")
+    MetricsCollector.start(spark = spark, pipelineId = "3390/pipelines/ExploreTCPH")
     pipeline(spark)
     MetricsCollector.end(spark)
 

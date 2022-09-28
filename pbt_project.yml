@@ -5,6 +5,17 @@ author: sparklearner123@gmail.com
 language: python
 buildSystem: wheel
 pipelines:
+  pipelines/MyFirstPipeline:
+    name: MyFirstPipeline
+    description: ''
+    author: sparklearner123@gmail.com
+    mode: batch
+    language: python
+    createdAt: '2022-09-27 15:24:24'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
   pipelines/TPCH:
     name: TPCH
     description: ''
@@ -26,6 +37,17 @@ pipelines:
       - 3328/datasets/TPCH_call_collections
       - 3328/datasets/LINEITEMS_LIMIT_100K
     dependencies: {}
+  pipelines/Test:
+    name: Test
+    description: ''
+    author: sparklearner123@gmail.com
+    mode: batch
+    language: python
+    createdAt: '2022-09-28 15:20:24'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
   pipelines/ExploreTCPH:
     name: ExploreTCPH
     description: ''
@@ -36,8 +58,10 @@ pipelines:
     datasets:
       inputs:
       - 3328/datasets/TCPH_SF1_LINEITEM
+      - 3390/datasets/TCPH_SF1_LINEITEM
       outputs:
       - 3328/datasets/lineitem_agg
+      - 3390/datasets/lineitem_agg
     dependencies: {}
 datasets:
   datasets/LINEITEMS_LIMIT_100K:
@@ -100,6 +124,42 @@ datasets:
         description: ''
         author: sparklearner123@gmail.com
         createdAt: '2022-09-22 20:00:58'
+  datasets/TPCH_SF1_CUSTOMER:
+    name: TPCH_SF1_CUSTOMER
+    description: ''
+    author: sparklearner123@gmail.com
+    createdAt: '2022-09-23 19:33:58'
+    physicalDatasets:
+      dev:
+        fabricId: 990
+        datasetType: Warehouse
+        description: ''
+        author: sparklearner123@gmail.com
+        createdAt: '2022-09-23 19:33:58'
+  datasets/TPCH_SF1_NATION:
+    name: TPCH_SF1_NATION
+    description: ''
+    author: sparklearner123@gmail.com
+    createdAt: '2022-09-23 20:49:35'
+    physicalDatasets:
+      dev:
+        fabricId: 990
+        datasetType: Warehouse
+        description: ''
+        author: sparklearner123@gmail.com
+        createdAt: '2022-09-23 20:49:35'
+  datasets/TPCH_SF1_REGION:
+    name: TPCH_SF1_REGION
+    description: ''
+    author: sparklearner123@gmail.com
+    createdAt: '2022-09-23 21:10:42'
+    physicalDatasets:
+      dev:
+        fabricId: 990
+        datasetType: Warehouse
+        description: ''
+        author: sparklearner123@gmail.com
+        createdAt: '2022-09-23 21:10:42'
   datasets/TCPH_SF1_LINEITEM:
     name: TCPH_SF1_LINEITEM
     description: ''
@@ -112,6 +172,18 @@ datasets:
         description: ''
         author: sparklearner123@gmail.com
         createdAt: '2022-09-23 15:25:05'
+  datasets/TPCH_SF1_ORDERS:
+    name: TPCH_SF1_ORDERS
+    description: ''
+    author: sparklearner123@gmail.com
+    createdAt: '2022-09-23 21:05:36'
+    physicalDatasets:
+      dev:
+        fabricId: 990
+        datasetType: Warehouse
+        description: ''
+        author: sparklearner123@gmail.com
+        createdAt: '2022-09-23 21:05:36'
   datasets/lineitem_agg:
     name: lineitem_agg
     description: ''
@@ -136,6 +208,18 @@ datasets:
         description: ''
         author: sparklearner123@gmail.com
         createdAt: '2022-09-22 16:33:46'
+  datasets/TPCH_SF1_SUPPLIER:
+    name: TPCH_SF1_SUPPLIER
+    description: ''
+    author: sparklearner123@gmail.com
+    createdAt: '2022-09-23 19:37:30'
+    physicalDatasets:
+      dev:
+        fabricId: 990
+        datasetType: Warehouse
+        description: ''
+        author: sparklearner123@gmail.com
+        createdAt: '2022-09-23 19:37:30'
   datasets/TCPH_DB:
     name: TCPH_DB
     description: ''

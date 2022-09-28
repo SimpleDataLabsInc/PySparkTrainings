@@ -18,12 +18,12 @@ def WindowFunction_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
         )\
         .withColumn(
           "sum_disc_price",
-          sum(col("l_extendedprice") * lit(1) - col("l_discount"))\
+          sum((col("l_extendedprice") * (lit(1) - col("l_discount"))))\
             .over(Window.partitionBy().orderBy(col("l_returnflag").asc(), col("l_linestatus").asc()))
         )\
         .withColumn(
           "sum_charge",
-          sum(col("l_extendedprice") * lit(1) - col("l_discount") * lit(1) + col("l_tax"))\
+          sum(((col("l_extendedprice") * (lit(1) - col("l_discount"))) * (lit(1) + col("l_tax"))))\
             .over(Window.partitionBy().orderBy(col("l_returnflag").asc(), col("l_linestatus").asc()))
         )\
         .withColumn(

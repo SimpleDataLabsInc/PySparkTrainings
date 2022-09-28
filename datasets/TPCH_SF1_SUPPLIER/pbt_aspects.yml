@@ -1,0 +1,32 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: S_SUPPKEY
+    type: decimal(38,0)
+    nullable: true
+    metadata: {}
+  - name: S_NAME
+    type: string
+    nullable: true
+    metadata: {}
+  - name: S_ADDRESS
+    type: string
+    nullable: true
+    metadata: {}
+  - name: S_NATIONKEY
+    type: decimal(38,0)
+    nullable: true
+    metadata: {}
+  - name: S_PHONE
+    type: string
+    nullable: true
+    metadata: {}
+  - name: S_ACCTBAL
+    type: decimal(12,2)
+    nullable: true
+    metadata: {}
+  - name: S_COMMENT
+    type: string
+    nullable: true
+    metadata: {}

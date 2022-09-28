@@ -1,0 +1,505 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "990",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default"
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "test"
+  },
+  "connections" : [ {
+    "id" : "9-PhFrf-X_ELeDZJzOIni",
+    "source" : "hnkmLC53UzEJyyY62UY-u$$gm1ofbYQ2buvNSz8Y80L4",
+    "sourcePort" : "VJTlIwVedVXEudMAoWqcM$$NPyDMkbV_1m47O3u71vdr",
+    "target" : "BUfU2xHz2BwxclUZnMO-g$$dnJJiQQY6Pl0W7eEl_RC_",
+    "targetPort" : "8KJI2sfWtKDcoBChFFl6a$$1SnDZL78mvWjpKX2OKqwe"
+  }, {
+    "id" : "KvQZDR5xYHLuUk21lCpZz",
+    "source" : "BUfU2xHz2BwxclUZnMO-g$$dnJJiQQY6Pl0W7eEl_RC_",
+    "sourcePort" : "gLr9yOdFH3WLCWtVkfmaR$$al4mA83f6t5vgk2dpR-uI",
+    "target" : "hldzcjQ2cmh3I7esfKD6p$$wxNlI7QDVf7bqzln7CthT",
+    "targetPort" : "CvDcXUKZT8q6ra3b2bp9T$$1LEKB4Ei3bq4mSw-4RINu"
+  }, {
+    "id" : "HyXcNia28PlVc65q0HbGi",
+    "source" : "ETuGm-O2u-VCokS2jltW1$$tyda_lXqoz7sb_iCKD_RK",
+    "sourcePort" : "DyYKyQtHCxuNIh3fwvzRe$$6VS3GTKU5G9sN_Hpuhp12",
+    "target" : "Kon3bntp4P9kbAlOCw095$$7u9UcKQMNLVDt7dSw-9dd",
+    "targetPort" : "jxwhW4cnD3AuepgyVGbxW$$MrEdwV4QqoVGX_L06hAcn"
+  }, {
+    "id" : "nZ9NaNCfNVj-bsnEa_zEM",
+    "source" : "Kon3bntp4P9kbAlOCw095$$7u9UcKQMNLVDt7dSw-9dd",
+    "sourcePort" : "0TEZXa1BHf_Dn8d0NBwas$$rQBeBixNcm_OqHgX13nJ2",
+    "target" : "hnkmLC53UzEJyyY62UY-u$$gm1ofbYQ2buvNSz8Y80L4",
+    "targetPort" : "uStMzLkJgKs0zkw4FDAHG$$a1lexPUkw6IsNQHkcU0eg"
+  }, {
+    "id" : "JT6ZN17GUvRN4YHQURDUH",
+    "source" : "ETuGm-O2u-VCokS2jltW1$$tyda_lXqoz7sb_iCKD_RK",
+    "sourcePort" : "DyYKyQtHCxuNIh3fwvzRe$$6VS3GTKU5G9sN_Hpuhp12",
+    "target" : "cY-9au3jQdQQMn_LYBdBP$$rjMW6HKMLA2LSn_atJWTU",
+    "targetPort" : "1aybt2R_kUZS6CEMH_HqM$$9sFvGaLyYLCdNwXHcajHI"
+  }, {
+    "id" : "c3NpyJY1XD4Xol5zziMLs",
+    "source" : "cY-9au3jQdQQMn_LYBdBP$$rjMW6HKMLA2LSn_atJWTU",
+    "sourcePort" : "YXz9z0IVdcCVilpXRPVIg$$vuXpl6QcqIc_DOE8YPKhV",
+    "target" : "oMF1Of-gZB9aOwgYXJUf8$$TuN2c2bZMKlgcaRDkHBQ2",
+    "targetPort" : "nl_rHINSPHSgBz5Ah8Pp7$$C2n94byBj6sgg8MkxaZkr"
+  } ],
+  "processes" : {
+    "hldzcjQ2cmh3I7esfKD6p$$wxNlI7QDVf7bqzln7CthT" : {
+      "id" : "hldzcjQ2cmh3I7esfKD6p$$wxNlI7QDVf7bqzln7CthT",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "LINEITEM_AGG",
+        "slug" : "LINEITEM_AGG",
+        "x" : 872.0001871407159,
+        "y" : 137.60000000000005,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CvDcXUKZT8q6ra3b2bp9T$$1LEKB4Ei3bq4mSw-4RINu",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "3328/datasets/lineitem_agg"
+      }
+    },
+    "Kon3bntp4P9kbAlOCw095$$7u9UcKQMNLVDt7dSw-9dd" : {
+      "id" : "Kon3bntp4P9kbAlOCw095$$7u9UcKQMNLVDt7dSw-9dd",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Cleanup",
+        "slug" : "Cleanup",
+        "x" : 293.99362435428003,
+        "y" : 138.56666666666672,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "jxwhW4cnD3AuepgyVGbxW$$MrEdwV4QqoVGX_L06hAcn",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "0TEZXa1BHf_Dn8d0NBwas$$rQBeBixNcm_OqHgX13nJ2",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_LINESTATUS", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_TAX", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_PARTKEY", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_COMMITDATE", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_DISCOUNT", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_LINENUMBER", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_SHIPINSTRUCT", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_EXTENDEDPRICE", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_QUANTITY", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_RECEIPTDATE", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_SHIPDATE", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_ORDERKEY", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_COMMENT", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_RETURNFLAG", "AMIR95Bndd0B7tv1eB2Ip$$x5mvitWvsBYy0vR4iwn2G##L_SUPPKEY" ],
+        "expressions" : [ {
+          "target" : "L_ORDERKEY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_ORDERKEY"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_PARTKEY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_PARTKEY"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_SUPPKEY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_SUPPKEY"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_LINENUMBER",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_LINENUMBER"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_QUANTITY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_QUANTITY"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_EXTENDEDPRICE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_EXTENDEDPRICE"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_DISCOUNT",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_DISCOUNT"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_TAX",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "if (L_TAX is null, '0.2', L_TAX)"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_RETURNFLAG",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_RETURNFLAG"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_LINESTATUS",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_LINESTATUS"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_SHIPDATE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_SHIPDATE"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_COMMITDATE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_COMMITDATE"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_RECEIPTDATE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_RECEIPTDATE"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_SHIPINSTRUCT",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "regexp_replace(L_SHIPINSTRUCT,' ','_')"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_SHIPMODE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "regexp_replace(L_SHIPINSTRUCT,' ','_')"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_COMMENT",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_COMMENT"
+          },
+          "description" : ""
+        }, {
+          "target" : "L_CLEARANCE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "case when (\n    L_DISCOUNT > 60\n)\nor (\n    L_RETURNFLAG is true\n) then 'true' else 'false' end"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "hnkmLC53UzEJyyY62UY-u$$gm1ofbYQ2buvNSz8Y80L4" : {
+      "id" : "hnkmLC53UzEJyyY62UY-u$$gm1ofbYQ2buvNSz8Y80L4",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "AggQty",
+        "slug" : "AggQty",
+        "x" : 474.40078845435676,
+        "y" : 137.6000000000001,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "uStMzLkJgKs0zkw4FDAHG$$a1lexPUkw6IsNQHkcU0eg",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "VJTlIwVedVXEudMAoWqcM$$NPyDMkbV_1m47O3u71vdr",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "SUM_QTY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(L_QUANTITY)"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "SUM_BASE_PRICE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(L_EXTENDEDPRICE)"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "SUM_DISC_PRICE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(L_EXTENDEDPRICE * (1-L_DISCOUNT))"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "SUM_CHARGE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(L_EXTENDEDPRICE * (1-L_DISCOUNT) * (1+L_TAX))"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "AVG_QTY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "avg(L_QUANTITY)"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "AVG_DISC",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "avg(L_DISCOUNT)"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "count_order",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "count(*)"
+          },
+          "description" : "",
+          "_row_id" : ""
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_LINESTATUS", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_DISCOUNT", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_TAX", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_RETURNFLAG", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_EXTENDEDPRICE", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_QUANTITY" ],
+        "groupBy" : [ {
+          "target" : "L_RETURNFLAG",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_RETURNFLAG"
+          },
+          "description" : "",
+          "_row_id" : ""
+        }, {
+          "target" : "L_LINESTATUS",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_LINESTATUS"
+          },
+          "description" : "",
+          "_row_id" : ""
+        } ]
+      }
+    },
+    "oMF1Of-gZB9aOwgYXJUf8$$TuN2c2bZMKlgcaRDkHBQ2" : {
+      "id" : "oMF1Of-gZB9aOwgYXJUf8$$TuN2c2bZMKlgcaRDkHBQ2",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_2",
+        "slug" : "Filter_2",
+        "x" : 482.9336420544751,
+        "y" : 340.0500000000002,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nl_rHINSPHSgBz5Ah8Pp7$$C2n94byBj6sgg8MkxaZkr",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "_8DEPw706QbxsgXXy9_JM$$RWGD7udX2s4_Or9nO9tv0",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "true"
+        }
+      }
+    },
+    "BUfU2xHz2BwxclUZnMO-g$$dnJJiQQY6Pl0W7eEl_RC_" : {
+      "id" : "BUfU2xHz2BwxclUZnMO-g$$dnJJiQQY6Pl0W7eEl_RC_",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "OrderBy",
+        "slug" : "OrderBy",
+        "x" : 680.4000688369663,
+        "y" : 136.40000000000006,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "8KJI2sfWtKDcoBChFFl6a$$1SnDZL78mvWjpKX2OKqwe",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "gLr9yOdFH3WLCWtVkfmaR$$al4mA83f6t5vgk2dpR-uI",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "ep3c7ZopCDKgeB51fE314$$ObhKh6ggnCw3rvyuvH8hs##L_RETURNFLAG", "ep3c7ZopCDKgeB51fE314$$ObhKh6ggnCw3rvyuvH8hs##L_LINESTATUS" ],
+        "orders" : [ {
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_RETURNFLAG"
+          },
+          "sortType" : "asc"
+        }, {
+          "expression" : {
+            "format" : "sql",
+            "expression" : "L_LINESTATUS"
+          },
+          "sortType" : "asc"
+        } ]
+      }
+    },
+    "cY-9au3jQdQQMn_LYBdBP$$rjMW6HKMLA2LSn_atJWTU" : {
+      "id" : "cY-9au3jQdQQMn_LYBdBP$$rjMW6HKMLA2LSn_atJWTU",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQLStatement_1",
+        "slug" : "SQLStatement_1",
+        "x" : 299.33364205447515,
+        "y" : 336.45000000000016,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1aybt2R_kUZS6CEMH_HqM$$9sFvGaLyYLCdNwXHcajHI",
+          "slug" : "LINEITEM"
+        } ],
+        "outputs" : [ {
+          "id" : "YXz9z0IVdcCVilpXRPVIg$$vuXpl6QcqIc_DOE8YPKhV",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "out",
+          "id" : "lQPWAb615ZhEFKnA6LJSC$$nmaMS6hnInrRnIkgG6Gs6",
+          "language" : "sql",
+          "content" : "SELECT * FROM LINEITEM where (L_TAX is null);"
+        } ],
+        "inputPortNames" : [ "LINEITEM" ]
+      }
+    },
+    "ETuGm-O2u-VCokS2jltW1$$tyda_lXqoz7sb_iCKD_RK" : {
+      "id" : "ETuGm-O2u-VCokS2jltW1$$tyda_lXqoz7sb_iCKD_RK",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "LINEITEM",
+        "slug" : "LINEITEM",
+        "x" : 116.00054646580563,
+        "y" : 141.2,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "DyYKyQtHCxuNIh3fwvzRe$$6VS3GTKU5G9sN_Hpuhp12",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "3328/datasets/TCPH_SF1_LINEITEM"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  }
+}
