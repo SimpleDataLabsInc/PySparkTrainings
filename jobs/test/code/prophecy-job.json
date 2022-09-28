@@ -2,15 +2,15 @@
   "metainfo" : {
     "type" : "Databricks",
     "fabricId" : "990",
-    "jobId" : "3390/jobs/gettingStarted",
-    "name" : "gettingStarted",
-    "schedule" : "0 0/5 * * * ? *",
+    "jobId" : "3390/jobs/test",
+    "name" : "test",
+    "schedule" : "0 0 0/1 * * ? *",
     "enabled" : false,
     "defaultClusterSize" : "Small",
     "alerting" : {
-      "emails" : "",
+      "emails" : "anya@prophecy.io",
       "onStart" : false,
-      "onSuccess" : false,
+      "onSuccess" : true,
       "onFailure" : false
     },
     "processDefaultSettings" : {
@@ -33,8 +33,8 @@
     } ]
   },
   "processes" : {
-    "BTrwjodmrylmav_KRPyPX" : {
-      "id" : "BTrwjodmrylmav_KRPyPX",
+    "fy5qn-Er8RIyUXQwEa14n" : {
+      "id" : "fy5qn-Er8RIyUXQwEa14n",
       "component" : "Pipeline",
       "metadata" : {
         "label" : "ExploreTCPH",
@@ -60,7 +60,7 @@
         }
       },
       "properties" : {
-        "pipelineId" : "3328/pipelines/ExploreTCPH",
+        "pipelineId" : "3390/pipelines/ExploreTCPH",
         "configurations" : {
           "schema" : [ ],
           "instances" : [ "default" ],

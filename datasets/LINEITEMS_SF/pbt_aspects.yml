@@ -5,36 +5,63 @@ schema:
   - name: s_suppkey
     type: long
     nullable: true
-    metadata: {}
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: s_name
     type: string
     nullable: true
-    metadata: {}
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: s_address
     type: string
     nullable: true
-    metadata: {}
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: s_nationkey
     type: long
     nullable: true
-    metadata: {}
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: s_phone
     type: string
     nullable: true
-    metadata: {}
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: s_acctbal
     type: decimal(17,0)
     nullable: true
-    metadata: {}
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: s_comment
     type: string
     nullable: true
-    metadata: {}
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: reject_record
     type: string
     nullable: false
-    metadata: {}
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: refer_collections
     type: string
     nullable: false
-    metadata: {}
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

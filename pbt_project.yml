@@ -5,6 +5,17 @@ author: sparklearner123@gmail.com
 language: python
 buildSystem: wheel
 pipelines:
+  pipelines/MyFirstPipeline:
+    name: MyFirstPipeline
+    description: ''
+    author: sparklearner123@gmail.com
+    mode: batch
+    language: python
+    createdAt: '2022-09-27 15:24:24'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
   pipelines/TPCH:
     name: TPCH
     description: ''
@@ -26,6 +37,17 @@ pipelines:
       - 3328/datasets/TPCH_call_collections
       - 3328/datasets/LINEITEMS_LIMIT_100K
     dependencies: {}
+  pipelines/Test:
+    name: Test
+    description: ''
+    author: sparklearner123@gmail.com
+    mode: batch
+    language: python
+    createdAt: '2022-09-28 15:20:24'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
   pipelines/ExploreTCPH:
     name: ExploreTCPH
     description: ''
@@ -36,6 +58,7 @@ pipelines:
     datasets:
       inputs:
       - 3328/datasets/TCPH_SF1_LINEITEM
+      - 3390/datasets/TCPH_SF1_LINEITEM
       outputs:
       - 3328/datasets/lineitem_agg
     dependencies: {}
@@ -280,6 +303,29 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2022-09-26 21:40:07'
+    author: sparklearner123@gmail.com
+  jobs/test:
+    name: test
+    description: ''
+    fabricUID: 990
+    scheduler:
+      Databricks: {}
+    jobSize: Small
+    scheduleCron: 0 0 0/1 * * ? *
+    timeout: null
+    alerting:
+      emails: anya@prophecy.io
+      onStart: false
+      onSuccess: true
+      onFailure: false
+    pipelines:
+    - 3390/pipelines/ExploreTCPH
+    jobClusterMode:
+      clusterMode:
+        Multi: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2022-09-27 22:57:26'
     author: sparklearner123@gmail.com
 libraries: []
 subgraphs: {}

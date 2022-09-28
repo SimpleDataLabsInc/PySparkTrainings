@@ -61,18 +61,6 @@
     "sourcePort" : "pHO5LvOG8qkYFJ02sK5vy$$oGelFMi9v78vQPViq6Qyw",
     "target" : "1WEhn6dfo4Z0UQp7xFaqs$$adqEs5-EddvhbJsxJaUkX",
     "targetPort" : "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6"
-  }, {
-    "id" : "-rgnuXAH-jF1zFwIasX0_",
-    "source" : "qPT0LKcG49tr_Q-yOQbb-$$ZGcpdxBCeNfXMYpjMh9Qb",
-    "sourcePort" : "UvjHnsh5zFew6qVluAe9U$$OSordeDpENtLckaGotE3-",
-    "target" : "ODCe3byZQ-RyGRET8g7xW$$IcuuPzKSIyZ1CUlsqBk0g",
-    "targetPort" : "a7KNVrpuaoh9CQqIfzOSi$$vXTtUSo6eYnfcFAUWMPGA"
-  }, {
-    "id" : "KX9TrZtQJIJ9C_HiycfbO",
-    "source" : "ODCe3byZQ-RyGRET8g7xW$$IcuuPzKSIyZ1CUlsqBk0g",
-    "sourcePort" : "lQPWAb615ZhEFKnA6LJSC$$nmaMS6hnInrRnIkgG6Gs6",
-    "target" : "ImTlwN3oRmf79iK6Pt8e7$$TkfImts_-fsbbcbbEtgaR",
-    "targetPort" : "g2CuzmhEdveZOSvgDLR-R$$B9uraEwkw5jXZRkCk2Yqo"
   } ],
   "processes" : {
     "4okqlEPTfJBQ2BT-ayKX0$$x1RGAvGZBBsx8lAjMGEdv" : {
@@ -141,41 +129,6 @@
           },
           "sortType" : "asc"
         } ]
-      }
-    },
-    "ODCe3byZQ-RyGRET8g7xW$$IcuuPzKSIyZ1CUlsqBk0g" : {
-      "id" : "ODCe3byZQ-RyGRET8g7xW$$IcuuPzKSIyZ1CUlsqBk0g",
-      "component" : "SQLStatement",
-      "metadata" : {
-        "label" : "SQLStatement_1",
-        "slug" : "SQLStatement_1",
-        "x" : 279.33364205447515,
-        "y" : 316.45000000000016,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "a7KNVrpuaoh9CQqIfzOSi$$vXTtUSo6eYnfcFAUWMPGA",
-          "slug" : "LINEITEM"
-        } ],
-        "outputs" : [ {
-          "id" : "lQPWAb615ZhEFKnA6LJSC$$nmaMS6hnInrRnIkgG6Gs6",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "fileTabs" : [ {
-          "path" : "out",
-          "id" : "lQPWAb615ZhEFKnA6LJSC$$nmaMS6hnInrRnIkgG6Gs6",
-          "language" : "sql",
-          "content" : "SELECT * FROM LINEITEM where (L_TAX is null);"
-        } ],
-        "inputPortNames" : [ "LINEITEM" ]
       }
     },
     "1WEhn6dfo4Z0UQp7xFaqs$$adqEs5-EddvhbJsxJaUkX" : {
@@ -310,40 +263,7 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "datasetId" : "3328/datasets/TCPH_SF1_LINEITEM"
-      }
-    },
-    "ImTlwN3oRmf79iK6Pt8e7$$TkfImts_-fsbbcbbEtgaR" : {
-      "id" : "ImTlwN3oRmf79iK6Pt8e7$$TkfImts_-fsbbcbbEtgaR",
-      "component" : "Filter",
-      "metadata" : {
-        "label" : "Filter_2",
-        "slug" : "Filter_2",
-        "x" : 462.9336420544751,
-        "y" : 320.0500000000002,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "g2CuzmhEdveZOSvgDLR-R$$B9uraEwkw5jXZRkCk2Yqo",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "Hz6b1WOwrz6aKx341W8d_$$9dgn-3yygx7eBJtdJssdE",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "condition" : {
-          "format" : "sql",
-          "expression" : "true"
-        }
+        "datasetId" : "3390/datasets/TCPH_SF1_LINEITEM"
       }
     },
     "bhkRcyI5N9wqRZKX4nmT4$$zJYp4ANcVbY3z9Fu7UFAn" : {

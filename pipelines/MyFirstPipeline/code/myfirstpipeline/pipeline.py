@@ -1,17 +1,13 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
-from exploretcph.config.ConfigStore import *
-from exploretcph.udfs.UDFs import *
+from myfirstpipeline.config.ConfigStore import *
+from myfirstpipeline.udfs.UDFs import *
 from prophecy.utils import *
-from exploretcph.graph import *
+from myfirstpipeline.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_LINEITEM = LINEITEM(spark)
-    df_Cleanup = Cleanup(spark, df_LINEITEM)
-    df_AggQty = AggQty(spark, df_Cleanup)
-    df_OrderBy = OrderBy(spark, df_AggQty)
-    LINEITEM_AGG(spark, df_OrderBy)
+    df_Source_0 = Source_0(spark)
 
 def main():
     spark = SparkSession.builder\
@@ -22,8 +18,8 @@ def main():
                 .getOrCreate()\
                 .newSession()
     Utils.initializeFromArgs(spark, parse_args())
-    spark.conf.set("prophecy.metadata.pipeline.uri", "3390/pipelines/ExploreTCPH")
-    MetricsCollector.start(spark = spark, pipelineId = "3390/pipelines/ExploreTCPH")
+    spark.conf.set("prophecy.metadata.pipeline.uri", "3390/pipelines/MyFirstPipeline")
+    MetricsCollector.start(spark = spark, pipelineId = "3390/pipelines/MyFirstPipeline")
     pipeline(spark)
     MetricsCollector.end(spark)
 

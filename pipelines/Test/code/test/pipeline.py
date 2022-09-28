@@ -1,10 +1,10 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
-from exploretcph.config.ConfigStore import *
-from exploretcph.udfs.UDFs import *
+from test.config.ConfigStore import *
+from test.udfs.UDFs import *
 from prophecy.utils import *
-from exploretcph.graph import *
+from test.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_LINEITEM = LINEITEM(spark)
@@ -12,6 +12,8 @@ def pipeline(spark: SparkSession) -> None:
     df_AggQty = AggQty(spark, df_Cleanup)
     df_OrderBy = OrderBy(spark, df_AggQty)
     LINEITEM_AGG(spark, df_OrderBy)
+    df_SQLStatement_1 = SQLStatement_1(spark, df_LINEITEM)
+    df_Filter_2 = Filter_2(spark, df_SQLStatement_1)
 
 def main():
     spark = SparkSession.builder\
@@ -22,8 +24,8 @@ def main():
                 .getOrCreate()\
                 .newSession()
     Utils.initializeFromArgs(spark, parse_args())
-    spark.conf.set("prophecy.metadata.pipeline.uri", "3390/pipelines/ExploreTCPH")
-    MetricsCollector.start(spark = spark, pipelineId = "3390/pipelines/ExploreTCPH")
+    spark.conf.set("prophecy.metadata.pipeline.uri", "3390/pipelines/Test")
+    MetricsCollector.start(spark = spark, pipelineId = "3390/pipelines/Test")
     pipeline(spark)
     MetricsCollector.end(spark)
 
