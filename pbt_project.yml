@@ -61,6 +61,7 @@ pipelines:
       - 3390/datasets/TCPH_SF1_LINEITEM
       outputs:
       - 3328/datasets/lineitem_agg
+      - 3390/datasets/lineitem_agg
     dependencies: {}
 datasets:
   datasets/LINEITEMS_LIMIT_100K:
@@ -280,53 +281,7 @@ datasets:
         author: sparklearner123@gmail.com
         createdAt: '2022-09-22 20:23:48'
 templates: {}
-jobs:
-  jobs/gettingStarted:
-    name: gettingStarted
-    description: ''
-    fabricUID: 990
-    scheduler:
-      Databricks: {}
-    jobSize: Small
-    scheduleCron: 0 0/5 * * * ? *
-    timeout: null
-    alerting:
-      emails: ''
-      onStart: false
-      onSuccess: false
-      onFailure: false
-    pipelines:
-    - 3328/pipelines/ExploreTCPH
-    jobClusterMode:
-      clusterMode:
-        Multi: {}
-      clusterId: null
-    enabled: null
-    createdAt: '2022-09-26 21:40:07'
-    author: sparklearner123@gmail.com
-  jobs/test:
-    name: test
-    description: ''
-    fabricUID: 990
-    scheduler:
-      Databricks: {}
-    jobSize: Small
-    scheduleCron: 0 0 0/1 * * ? *
-    timeout: null
-    alerting:
-      emails: anya@prophecy.io
-      onStart: false
-      onSuccess: true
-      onFailure: false
-    pipelines:
-    - 3390/pipelines/ExploreTCPH
-    jobClusterMode:
-      clusterMode:
-        Multi: {}
-      clusterId: null
-    enabled: null
-    createdAt: '2022-09-27 22:57:26'
-    author: sparklearner123@gmail.com
+jobs: {}
 libraries: []
 subgraphs: {}
 dependencies: []
