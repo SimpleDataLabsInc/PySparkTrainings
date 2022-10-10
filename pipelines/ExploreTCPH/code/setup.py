@@ -12,5 +12,5 @@ setup(
 'console_scripts' : [
 'main = exploretcph.pipeline:main', ], },
     extras_require = {
-'test' : ['pytest', 'pytest-html'], }
+'test' : ['pytest', 'pytest-html'], 'newtest' : ['something'], }
 )

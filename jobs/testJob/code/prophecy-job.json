@@ -1,0 +1,81 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "1045",
+    "jobId" : "3390/jobs/testJob",
+    "name" : "testJob",
+    "schedule" : "0 0/10 * * * ? *",
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "990",
+      "name" : "dev",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      }
+    }, {
+      "id" : "1045",
+      "name" : "Photon",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      }
+    } ]
+  },
+  "processes" : {
+    "jgIwTCG8xMOGqkt_1eDOV$$GxlxpookHxzWzUpyxc3jT" : {
+      "id" : "jgIwTCG8xMOGqkt_1eDOV$$GxlxpookHxzWzUpyxc3jT",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_0",
+        "slug" : "Pipeline_0",
+        "x" : 140,
+        "y" : 160
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1C2iEGmqf1kSMQvULhx_A$$9aWAuGUp3q4tz0ScfQnQR"
+        } ],
+        "outputs" : [ {
+          "id" : "EVqXNus2o2rLE-cs6ZBXH$$-x4KZrDLEgDUsXKxWHv28"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "3390/pipelines/ExploreTCPH",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : [ "default" ],
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    }
+  },
+  "connections" : [ ]
+}
