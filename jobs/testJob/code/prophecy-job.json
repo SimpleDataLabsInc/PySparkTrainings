@@ -1,11 +1,14 @@
 {
   "metainfo" : {
     "type" : "Databricks",
-    "fabricId" : "1045",
+    "fabricId" : "990",
     "jobId" : "3390/jobs/testJob",
     "name" : "testJob",
     "schedule" : "0 0/10 * * * ? *",
-    "enabled" : false,
+    "jobClusterMode" : {
+      "clusterMode" : "Multi"
+    },
+    "enabled" : true,
     "defaultClusterSize" : "small",
     "alerting" : {
       "emails" : "",

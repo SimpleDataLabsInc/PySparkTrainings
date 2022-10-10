@@ -253,7 +253,7 @@ jobs:
   jobs/testJob:
     name: testJob
     description: ''
-    fabricUID: 1045
+    fabricUID: 990
     scheduler:
       Databricks: {}
     jobSize: small
@@ -270,7 +270,7 @@ jobs:
       clusterMode:
         Multi: {}
       clusterId: null
-    enabled: null
+    enabled: true
     createdAt: '2022-10-10 16:33:17'
     author: sparklearner123@gmail.com
 libraries: []
