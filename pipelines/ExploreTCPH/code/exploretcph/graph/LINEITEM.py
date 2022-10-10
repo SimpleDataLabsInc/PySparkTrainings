@@ -14,7 +14,7 @@ def LINEITEM(spark: SparkSession) -> DataFrame:
             "sfUrl": "https://HA30422.us-east-2.aws.snowflakecomputing.com",
             "sfUser": DBUtils(spark).secrets.get(scope = "anyademos", key = "username"),
             "sfPassword": DBUtils(spark).secrets.get(scope = "anyademos", key = "password"),
-            "sfDatabase": "SNOWFLAKE_SAMPLE_DATA",
+            "sfDatabase": "SNOWFLAKE_SAMPLE_DATA_Prod",
             "sfSchema": "TPCH_SF1",
             "sfWarehouse": ""
           }
