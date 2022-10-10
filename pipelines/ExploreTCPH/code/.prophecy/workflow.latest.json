@@ -220,7 +220,7 @@
         "pivotColumn" : null,
         "pivotValues" : [ ],
         "activeTab" : "aggregate",
-        "columnsSelector" : [ "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_LINESTATUS", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_DISCOUNT", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_TAX", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_RETURNFLAG", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_EXTENDEDPRICE", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_QUANTITY" ],
+        "columnsSelector" : [ "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_EXTENDEDPRICE", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_DISCOUNT", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_QUANTITY", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_TAX", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_RETURNFLAG", "_41nOwawUBQ11vChieKh2$$HSb0B3xuCloL5j8Dnpnk6##L_LINESTATUS" ],
         "groupBy" : [ {
           "target" : "L_RETURNFLAG",
           "expression" : {
