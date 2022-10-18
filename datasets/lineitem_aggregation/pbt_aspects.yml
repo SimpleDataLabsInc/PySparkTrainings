@@ -1,0 +1,60 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: L_RETURNFLAG
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: L_LINESTATUS
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SUM_QTY
+    type: decimal(22,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SUM_BASE_PRICE
+    type: decimal(22,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SUM_CHARGE
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: AVG_QTY
+    type: decimal(16,6)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: AVG_DISC
+    type: decimal(16,6)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: count_order
+    type: long
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

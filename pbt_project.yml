@@ -20,7 +20,32 @@ pipelines:
       - 3328/datasets/lineitem_agg
       - 3390/datasets/lineitem_agg
     dependencies: {}
+  pipelines/ExploreBenchmarkingTPCH:
+    name: ExploreBenchmarkingTPCH
+    description: ''
+    author: sparklearner123@gmail.com
+    mode: batch
+    language: python
+    createdAt: '2022-10-18 17:11:08'
+    datasets:
+      inputs:
+      - 3390/datasets/TPCH_SF1_LINEITEM
+      outputs:
+      - 3390/datasets/lineitem_aggregation
+    dependencies: {}
 datasets:
+  datasets/lineitem_aggregation:
+    name: lineitem_aggregation
+    description: ''
+    author: sparklearner123@gmail.com
+    createdAt: '2022-10-18 17:26:21'
+    physicalDatasets:
+      dev:
+        fabricId: 990
+        datasetType: File
+        description: ''
+        author: sparklearner123@gmail.com
+        createdAt: '2022-10-18 17:26:21'
   datasets/LINEITEMS_LIMIT_100K:
     name: LINEITEMS_LIMIT_100K
     description: ''
@@ -213,6 +238,18 @@ datasets:
         description: ''
         author: sparklearner123@gmail.com
         createdAt: '2022-09-22 20:26:25'
+  datasets/TPCH_SF1_LINEITEM:
+    name: TPCH_SF1_LINEITEM
+    description: ''
+    author: sparklearner123@gmail.com
+    createdAt: '2022-10-18 17:19:53'
+    physicalDatasets:
+      dev:
+        fabricId: 990
+        datasetType: Warehouse
+        description: ''
+        author: sparklearner123@gmail.com
+        createdAt: '2022-10-18 17:19:53'
   datasets/HIGHVALUESALES:
     name: HIGHVALUESALES
     description: ''
@@ -237,8 +274,42 @@ datasets:
         description: ''
         author: sparklearner123@gmail.com
         createdAt: '2022-09-22 20:23:48'
-templates: {}
-jobs: {}
+templates:
+  templates/wheel:
+    name: wheel
+    description: null
+    author: sparklearner123@gmail.com
+    mode: batch
+    language: scala
+    createdAt: '2022-10-06 18:06:04'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
+jobs:
+  jobs/testJob:
+    name: testJob
+    description: ''
+    fabricUID: 1045
+    scheduler:
+      Databricks: {}
+    jobSize: small
+    scheduleCron: 0 0/10 * * * ? *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - 3390/pipelines/ExploreTCPH
+    jobClusterMode:
+      clusterMode:
+        Multi: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2022-10-10 16:33:17'
+    author: sparklearner123@gmail.com
 libraries: []
 subgraphs: {}
 dependencies: []
